@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactPaginate from 'react-paginate';
+import {NavLink} from 'react-router-dom'
 import _ from 'lodash';
 import axios from 'axios';
 import Table from "./Table/Table";
@@ -17,7 +18,7 @@ class App extends Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost/api/data_get.php')
+            .get('http://test.local/data/adverts/api/index.php')
             .then(response => {
                 this.setState({data: response.data});
             });
@@ -38,7 +39,7 @@ class App extends Component {
             const fd = new FormData();
             fd.append('csv', this.state.selectedFile, this.state.selectedFile.name);
             axios
-                .post('http://localhost/api/data_post.php', fd)
+                .post('http://test.local/data/adverts/api/post_data.php', fd)
                 .then(res => console.log(res));
             this.setState({selectedFile: null})
         } else {
