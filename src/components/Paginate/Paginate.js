@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactPaginate from "react-paginate";
 
-class Paginate {
-    render() {
+export default ({pageCount, handleChangePage}) => {
         return(<div className="row d-flex justify-content-center">
             <ReactPaginate
                 previousLabel={'previous'}
@@ -13,7 +12,7 @@ class Paginate {
                 pageCount={pageCount}
                 marginPagesDisplayed={2}
                 pageRangeDisplayed={5}
-                onPageChange={this.handleChangePage}
+                onPageChange={handleChangePage}
                 containerClassName={'pagination'}
                 activeClassName={'active'}
                 pageClassName={'page-item'}
@@ -25,6 +24,3 @@ class Paginate {
             />
         </div>)
     }
-}
-
-export default Paginate;
