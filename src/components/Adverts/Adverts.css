@@ -1,0 +1,14 @@
+.Adverts {
+ }
+
+.error {
+    color: red;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.success {
+    color: green;
+    font-weight: bolder;
+    margin: 0;
+}
