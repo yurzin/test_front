@@ -1,12 +1,14 @@
 import React from "react";
 import {NavLink} from 'react-router-dom'
 
-export default ({data, onclick}) => {
+export default ({data}) => {
     return (
         <div className="row">
             <div className="col-12 mt-3 mb-3 d-flex justify-content-between">
                 <h2 className="block">ОБЪЯВЛЕНИЯ</h2>
-                <button className="btn btn-danger" onClick={onclick}>подать объявление</button>
+                <NavLink to="/add">
+                <button className="btn btn-danger">подать объявление</button>
+                </NavLink>
             </div>
             <table className="table table-striped table-hover">
                 <thead className="thead-dark">
